@@ -15,9 +15,15 @@ def get_portfolio_data():
 
     tickers = tickers.split(',')
     raw_data = yf.download(tickers, start=start, end=end)
-    print("Downloaded data:\n", raw_data.head())
-    data = raw_data['Adj Close']
+    print("Downloaded data:\n", raw_data.head())  # Debug print
 
+    # Check for 'Adj Close', if it's not found use 'Close'
+    if 'Adj Close' in raw_data.columns:
+        data = raw_data['Adj Close']
+    elif 'Close' in raw_data.columns:
+        data = raw_data['Close']
+    else:
+        return jsonify({"error": "'Adj Close' or 'Close' data not found. Check ticker symbols and date range."}), 400
 
     if data.empty:
         return jsonify({"error": "No data found for the provided tickers within the specified date range"}), 404
