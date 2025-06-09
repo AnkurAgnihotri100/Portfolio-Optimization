@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 
+
 # Import the Blueprint from routes
 from routes.optimize import optimize_bp
 from routes.stock_list import stock_list_bp
