@@ -61,7 +61,7 @@ pip install -r requirements.txt
 # 5. Run Flask App
 python app.py
 
-# 6. For frontend (if using React)
+# 6. For frontend 
 cd frontend
 npm install
 npm start
