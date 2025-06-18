@@ -1,5 +1,4 @@
-# Portfolio-Optimization 
- Portfolio Optimization complete end to end project 
+
 # 📈 Portfolio Optimization
 
 An end-to-end project for **Portfolio Optimization**, designed to help investors maximize return and minimize risk using **modern portfolio theory**, **machine learning**, and **financial data analysis**.
